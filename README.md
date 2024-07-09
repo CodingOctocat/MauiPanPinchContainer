@@ -7,17 +7,26 @@ Honestly, the code is all mathematical calculations, and I don't fully understan
 
 ## Achieve 90% of the Android photo album viewing experience.
 
-# Features
+### Usage
+Sorry, I don't have time to post to NuGet, PanPinchContainer is now simple container without any configurable dependency properties.
+
+```xaml
+<PanPinchContainer>
+    <Image Source="hello_maui.jpg" />
+<PanPinchContainer>     
+```
+
+## Features
 - 1x ~ 10x Scaling: Supports scaling from 1x to 10x.
 - 0.5x Transient Scaling: Supports transient scaling of 0.5x.
 
-## Supported
+### Supported
 - Boundary Constraints: Limits scaling and panning within image boundaries.
 - Double Tap to Zoom: Double tap to zoom in (2x) or zoom out (1x).
 - Scaling Based on Pinch Position: Scale based on the position of the pinch gesture.
 - Panning and Zooming Animation: Smooth panning and zooming animations.
 
-## Not Supported
+### Not Supported
 - Rotation: Image rotation is not supported.
 
 ## Demo
