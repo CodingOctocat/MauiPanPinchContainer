@@ -12,7 +12,7 @@ public class PanPinchContainer : ContentView
 
     private double _currentScale = 1;
 
-    private bool _isPanEnabled;
+    private bool _isPanEnabled = true;
 
     private double _panX;
 
