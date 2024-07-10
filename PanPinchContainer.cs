@@ -123,7 +123,7 @@ public class PanPinchContainer : ContentView
         else
         {
             targetX = (Width - (Content.Width * _currentScale)) / 2;
-            targetY = ((Height - (Content.Height * _currentScale)) / 2) - (Content.Height / 2);
+            targetY = Content.Height * (1 - _currentScale) / 2;
         }
 
         await ClampTranslationAsync(targetX, targetY, animate);
