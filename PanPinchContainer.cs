@@ -59,10 +59,7 @@ public class PanPinchContainer : ContentView
 
         if (contentWidth <= Width)
         {
-            if (_currentScale > 1)
-            {
-                transX = -(contentWidth - Content.Width) / 2;
-            }
+            transX = -(contentWidth - Content.Width) / 2;
         }
         else
         {
@@ -73,10 +70,7 @@ public class PanPinchContainer : ContentView
 
         if (contentHeight <= Height)
         {
-            if (_currentScale > 1)
-            {
-                transY = -(contentHeight - Content.Height) / 2;
-            }
+            transY = -(contentHeight - Content.Height) / 2;
         }
         else
         {
