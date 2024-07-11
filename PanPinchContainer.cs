@@ -61,12 +61,14 @@ public class PanPinchContainer : ContentView
         {
             if (_currentScale > 1)
             {
-                transX = 0;
+                transX = -(contentWidth - Content.Width) / 2;
             }
         }
         else
         {
-            transX = Math.Clamp(transX, -(contentWidth - Width), 0);
+            double minBoundX = ((Width - Content.Width) / 2) + contentWidth - Width;
+            double maxBoundX = (Width - Content.Width) / 2;
+            transX = Math.Clamp(transX, -minBoundX, -maxBoundX);
         }
 
         if (contentHeight <= Height)
