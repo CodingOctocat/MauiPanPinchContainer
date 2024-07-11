@@ -85,7 +85,8 @@ public class PanPinchContainer : ContentView
         }
         else
         {
-            (Content.TranslationX, Content.TranslationY) = (transX, transY);
+            Content.TranslationX = transX;
+            Content.TranslationY = transY;
         }
     }
 
@@ -110,7 +111,6 @@ public class PanPinchContainer : ContentView
         double targetY = _panY - (originY * Content.Height * (_currentScale - _startScale));
 
         // Apply translation based on the change in origin.
-
         if (_currentScale > 1)
         {
             targetX = Math.Clamp(targetX, -Content.Width * (_currentScale - 1), 0);
@@ -201,6 +201,9 @@ public class PanPinchContainer : ContentView
         if (e.Status == GestureStatus.Started)
         {
             _isPanEnabled = false;
+
+            _panX = Content.TranslationX;
+            _panY = Content.TranslationY;
 
             // Store the current scale factor applied to the wrapped user interface element,
             // and zero the components for the center point of the translate transform.
