@@ -192,7 +192,7 @@ public class PanPinchContainer : ContentView
         else if (e.StatusType == GestureStatus.Canceled)
         {
             Content.TranslationX = _panX;
-            Content.TranslationY = _panX;
+            Content.TranslationY = _panY;
         }
     }
 
